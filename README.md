@@ -40,11 +40,6 @@ src/
 ├── App.css
 └── index.js
 
-yaml
-Copy code
-
----
-
 ## 🛠️ Installation & Setup
 
 1. **Clone the repository**
@@ -52,15 +47,11 @@ Copy code
    git clone https://github.com/your-username/react-player-cards.git
    cd react-player-cards
 Install dependencies
-
-bash
-Copy code
 npm install
-Run the app
 
-bash
-Copy code
+Run the app
 npm start
+
 The app will open automatically at http://localhost:3000
 
 🧩 Components Overview
@@ -80,9 +71,6 @@ Maps through all players from players.js and renders a list of Player components
 
 📦 players.js
 An array of player objects:
-
-js
-Copy code
 {
   name: "Kylian Mbappé",
   team: "Paris Saint-Germain",
@@ -93,6 +81,7 @@ Copy code
   gifURL: "/img/kylian-mbappe.gif",
   soundURL: "/sounds/kylian-mbappe.mp3"
 }
+
 🧱 App.js
 Root component that imports Header, PlayerList, and Footer.
 
@@ -106,9 +95,6 @@ Subtle card shadows and rounded borders
 Responsive layout with d-flex and flex-wrap
 
 Example:
-
-jsx
-Copy code
 <Card.Img
   variant="top"
   src={imageURL}
@@ -121,9 +107,6 @@ Copy code
 Each player has a unique sound stored in /public/sounds.
 
 Example function:
-
-js
-Copy code
 let currentAudio = null;
 
 const playSound = (soundURL) => {
@@ -137,6 +120,7 @@ const playSound = (soundURL) => {
   currentAudio = audio;
   audio.onended = () => (currentAudio = null);
 };
+
 📦 Dependencies
 React
 
@@ -147,23 +131,10 @@ Bootstrap
 (Optional) React Icons
 
 Install dependencies:
-
-bash
-Copy code
 npm install react-bootstrap bootstrap
+
 And import Bootstrap in index.js:
-
-js
-Copy code
 import 'bootstrap/dist/css/bootstrap.min.css';
-💡 Future Enhancements
-Add animation or icon change during sound playback
-
-Display player stats or achievements
-
-Add search/filter functionality
-
-Include background music or crowd sounds
 
 👨‍💻 Author
 Sylvestre Ibombo Gakosso
